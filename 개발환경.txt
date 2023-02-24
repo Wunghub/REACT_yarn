@@ -1,0 +1,73 @@
+리액트와 서블릿 연동하기 -chat1128 [D:\workspace_java2\chat1128]
+
+yarn 패키지매니져 사용함 
+
+설치 방법 
+npm install-g yarn
+-g를 주면 글로벌하게 전역에서 사용가능하게 설치 (-d 개발자 의존성 주입:spring,maven,gradle 에서)
+
+yarn-version
+패키지매니저 버전확인 
+
+리액트 프로젝트 생성하기 
+1. yarn create react-app template2023(프로젝트 이름)
+단 현재 바라보는 폴더 아래에 template2023 생성이된다는 것을 알자 
+VSCode로 프로젝트 열떄도 위 경로에서 열어야 에러없음 
+항상 D:\workspace_java2\chat1128\src\main\creact-front 열어야 함 
+
+2. yarn init--force 엔터 
+그냥 엔터를 계속치면 디폴트값으로 package.json에 등록됨
+
+////////////////////////////////////////////////////////////
+설치 후
+
+1.yarn add axios **
+cors이슈-스프링
+위 문제는 Moesif CORS-true/false 로 처리가능 
+서블릿과 연계하는 부분 -비동기 처릴 도와준다 -톰캣 서버의 서블릿요청함 
+fetch API에서 지원안되는 json()포맷 지원받음
+
+2.yarn add react-router-dom **
+-웹페이지 제작 필수 -화면전환-링크도 포함 
+index.js에 Brownser추가하기 -단 App.jsx를 감싸준다. 
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+
+실행하기 
+yarn start 
+http://localhost:3000/index.html실행됨-> div id ="root"
+
+ReactDom.creactRoot(rootElement).render(element(<Paint><Nice>)<=와 같은 컴포넌트가 올 수있다. )
+
+
+
+index.html-> index.js -> BrowserRouter로 App.jsx감쌈 -> App.jsx에서 Route통해 페이지 링크 
+
+
+
+3.yarn add react-bootstrap **
+css추가분
+만일 React bootstrap에 미지원부분에 대해서는 bootstrap을 
+설치하여 사용자 정의 CSS로 처리한다. 
+🔻
+4. yarn add bootstrap **
+
+5. yarn add styled-components ** 
+css 를 자스로
+
+6. yarn add @fortawesome/fontawesome-free **
+이모지 
+
+7. yarn add firebase **
+로그인 인증 할때 사용가능 
+회원가입도 지원함 
+Realtime DataBase Server -채팅기능에 활용 가능  
+
+
+8 .env 사용
+구글키값 
+카카오 키값
+****git ignore 써서 올라가지 않게 하기 ****
